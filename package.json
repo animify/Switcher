@@ -4,6 +4,8 @@
   "description": "The simplest JS theme switcher with CSS4 variables.",
   "main": "index.js",
   "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +26,11 @@
   "bugs": {
     "url": "https://github.com/animify/themes/issues"
   },
-  "homepage": "https://github.com/animify/themes#readme"
+  "homepage": "https://github.com/animify/themes#readme",
+  "devDependencies": {
+    "parcel": "^1.9.7"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
 }

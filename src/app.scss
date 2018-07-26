@@ -1,0 +1,155 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
+@import url('https://rsms.me/inter/inter-ui.css');
+
+:root {
+    --color-grey: #eceeef;
+    --color-black: black;
+    --color-white: white;
+    --color-green: #00f08a;
+    --color-yellow: #ffd800;
+    --color-purple: #7700ff;
+    --color-pink: #ff0075;
+    --color-blue: #00ccff;
+    --color-teal: #00ffe4;
+    --color-primary: #0059ff;
+    --color-orange: #ff7b00;
+    --color-slate: #5e676c;
+}
+
+* {
+    cursor: default;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter UI', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    color: var(--color-black);
+}
+
+main {
+    max-width: 980px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 128px 0 100px;
+
+    h1 {
+        font-weight: 600;
+        font-size: 76px;
+        letter-spacing: -1.2px;
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 24px;
+        font-weight: 400;
+        margin: 16px 0 36px 0;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+    .item {
+        padding: 64px 20px 20px 20px;
+        font-size: 40px;
+        font-weight: 800;
+    }
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 48px;
+}
+
+.green {
+    background-color: var(--color-green);
+}
+
+.yellow {
+    background-color: var(--color-yellow);
+}
+
+.item.purple {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+.item.pink {
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.item.black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.item.white {
+    background-color: var(--color-white);
+}
+
+.item.teal {
+    background-color: var(--color-teal);
+}
+
+.item.blue {
+    background-color: var(--color-blue);
+}
+
+.item.white {
+    background-color: var(--color-white);
+}
+
+.item.orange {
+    background-color: var(--color-orange);
+}
+
+.item.slate {
+    background-color: var(--color-slate);
+    color: var(--color-white);
+}
+
+.tabs {
+    display: flex;
+
+    .tab {
+        background-color: var(--color-grey);
+        color: var(--color-black);
+        padding: 12px 16px;
+
+        &:first-of-type {
+            border-radius: 4px 0 0 4px;
+        }
+
+        &:last-of-type {
+            border-radius: 0 4px 4px 0;
+        }
+
+        &.selected {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+    }
+}

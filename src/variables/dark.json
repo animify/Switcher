@@ -1,0 +1,11 @@
+{
+    "colors": {
+        "dark600": "#ccc",
+        "dark500": "#ddd",
+        "dark400": "#eee",
+        "dark300": "#fff",
+        "dark200": "#111",
+        "dark100": "#444",
+        "black": "#fff"
+    }
+}
