@@ -1,0 +1,18 @@
+{
+    "colors": {
+        "grey": "#eceeef",
+        "black": "#000",
+        "white": "#fff",
+        "black-transparent": "rgba(0,0,0, .3)",
+        "white-transparent": "rgba(255,255,255, .3)",
+        "green": "#00f08a",
+        "yellow": "#ffd800",
+        "purple": "#7700ff",
+        "pink": "#ff0075",
+        "blue": "#00ccff",
+        "teal": "#00ffe4",
+        "orange": "#ff7b00",
+        "slate": "#5e676c",
+        "primary": "#0059ff"
+    }
+}

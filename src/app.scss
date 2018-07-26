@@ -1,27 +1,13 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css');
 @import url('https://rsms.me/inter/inter-ui.css');
 
-:root {
-    --color-grey: #eceeef;
-    --color-black: black;
-    --color-white: white;
-    --color-green: #00f08a;
-    --color-yellow: #ffd800;
-    --color-purple: #7700ff;
-    --color-pink: #ff0075;
-    --color-blue: #00ccff;
-    --color-teal: #00ffe4;
-    --color-primary: #0059ff;
-    --color-orange: #ff7b00;
-    --color-slate: #5e676c;
-}
-
 * {
     cursor: default;
+    user-select: none;
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,19 +18,25 @@ body {
     font-weight: 500;
     display: flex;
     justify-content: center;
+    background-color: var(--color-white);
     color: var(--color-black);
+}
+
+strong {
+    font-weight: 600;
 }
 
 main {
     max-width: 980px;
     width: 100%;
+    padding: 0 32px 64px 32px;
 }
 
 .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 128px 0 100px;
+    padding: 140px 0 100px;
 
     h1 {
         font-weight: 600;
@@ -70,13 +62,20 @@ main {
         padding: 64px 20px 20px 20px;
         font-size: 40px;
         font-weight: 800;
+
+        span {
+            position: relative;
+            left: -6px;
+            padding: 0 6px;
+            background-color: var(--color-black-transparent);
+        }
     }
 }
 
 .text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 24px;
     margin-bottom: 48px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -94,16 +93,25 @@ main {
 .item.purple {
     background-color: var(--color-purple);
     color: var(--color-white);
+    span {
+        background-color: var(--color-white-transparent);
+    }
 }
 
 .item.pink {
     background-color: var(--color-pink);
     color: var(--color-white);
+    span {
+        background-color: var(--color-white-transparent);
+    }
 }
 
 .item.black {
     background-color: var(--color-black);
     color: var(--color-white);
+    span {
+        background-color: var(--color-white-transparent);
+    }
 }
 
 .item.white {
@@ -129,6 +137,9 @@ main {
 .item.slate {
     background-color: var(--color-slate);
     color: var(--color-white);
+    span {
+        background-color: var(--color-white-transparent);
+    }
 }
 
 .tabs {
@@ -148,6 +159,8 @@ main {
         }
 
         &.selected {
+            --color-white: #fff;
+
             background-color: var(--color-primary);
             color: var(--color-white);
         }
