@@ -28,9 +28,8 @@
   },
   "homepage": "https://github.com/animify/themes#readme",
   "devDependencies": {
-    "parcel": "^1.9.7"
-  },
-  "dependencies": {
+    "parcel": "^1.9.7",
+    "hoek": "^4.2.1",
     "node-sass": "^4.9.2"
   }
 }
