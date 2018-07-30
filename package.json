@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir build",
+    "deploy": "parcel build src/index.html --out-dir build && netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
