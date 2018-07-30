@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter UI', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -22,26 +22,60 @@ body {
     color: var(--color-black);
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-black);
+    transform: scale(1);
+    transition: transform 140ms ease;
+    display: inline-flex;
+
+    &[href] {
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+
+.logo {
+    background-color: var(--color-black);
+    color: var(--color-white); 
+    padding: 4px 6px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+
+    a + a {
+        margin-left: 24px;
+    }
+}
+
 strong {
     font-weight: 600;
 }
 
 main {
-    max-width: 980px;
+    max-width: 920px;
     width: 100%;
-    padding: 0 32px 64px 32px;
+    padding: 0 32px 0 32px;
 }
 
 .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 140px 0 100px;
+    padding: 112px 0 100px;
 
     h1 {
         font-weight: 600;
         font-size: 76px;
-        letter-spacing: -1.2px;
+        letter-spacing: -1.6px;
         margin: 0;
     }
 
@@ -74,7 +108,7 @@ main {
 
 .text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 24px;
     margin-bottom: 48px;
     display: grid;
@@ -82,11 +116,11 @@ main {
     grid-column-gap: 48px;
 }
 
-.green {
+.item.green {
     background-color: var(--color-green);
 }
 
-.yellow {
+.item.yellow {
     background-color: var(--color-yellow);
 }
 
@@ -146,7 +180,7 @@ main {
     display: flex;
 
     .tab {
-        background-color: var(--color-grey);
+        background-color: var(--color-snow);
         color: var(--color-black);
         padding: 12px 16px;
 
@@ -158,6 +192,10 @@ main {
             border-radius: 0 4px 4px 0;
         }
 
+        &:hover {
+            background-color: var(--color-dim);
+        }
+
         &.selected {
             --color-white: #fff;
 
@@ -165,4 +203,13 @@ main {
             color: var(--color-white);
         }
     }
+}
+
+footer {
+    color: var(--color-slate);
+    padding: 72px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }

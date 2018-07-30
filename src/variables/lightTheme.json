@@ -1,6 +1,5 @@
 {
     "colors": {
-        "grey": "#eceeef",
         "black": "#000",
         "white": "#fff",
         "black-transparent": "rgba(0,0,0, .3)",
@@ -13,6 +12,9 @@
         "teal": "#00ffe4",
         "orange": "#ff7b00",
         "slate": "#5e676c",
-        "primary": "#0059ff"
+        "smoke": "#929a9c",
+        "dim": "#d0d8db",
+        "snow": "#eceeef",
+        "primary": "#35b9f9"
     }
 }
