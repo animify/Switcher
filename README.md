@@ -1,4 +1,5 @@
-# Switcher
+![Switcher Dark Logo](https://cdn.rawgit.com/animify/Switcher/master/src/switcher-logo.svg)
+
 #### The most basic CSS4 Dark ↔ Light theme switcher - 🚀 by CSS4 variables & JS.
 
 ---
