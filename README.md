@@ -2,6 +2,8 @@
 
 #### The most basic CSS4 Dark ↔ Light theme switcher - 🚀 by CSS4 variables & JS.
 
+##### Check out the [demo](https://zen-pasteur-88f13d.netlify.com) and swap between Light & Dark themes.
+
 ---
 
 ### Getting Started
@@ -18,7 +20,7 @@ The dark theme config (`src/variables/darkTheme.json`) contains a map of the sam
 
 ## Switcher.js
 
-Switcher.js handles the logic behind theme switching. It simply sets picks up all values from the theme configs and adds custom CSS4 variables for each one in the `:root` of the document.
+Switcher.js (`src/Switcher.js`) handles the logic behind theme switching. It simply sets picks up all values from the theme configs and adds custom CSS4 variables for each one in the `:root` of the document.
 
 By default, the demo loads the light theme on load:
 ```js
