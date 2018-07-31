@@ -9,17 +9,15 @@
 body {
     min-height: 100%;
     width: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
     font-family: 'Inter UI', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    display: flex;
-    justify-content: center;
     background-color: var(--color-white);
     color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -61,9 +59,9 @@ strong {
 }
 
 main {
+    margin: 0 auto;
     max-width: 920px;
-    width: 100%;
-    padding: 0 32px 0 32px;
+    padding: 0 24px 0 24px;
 }
 
 .header {
@@ -77,12 +75,26 @@ main {
         font-size: 76px;
         letter-spacing: -1.6px;
         margin: 0;
+        line-height: 1.1;
     }
 
     h4 {
         font-size: 24px;
         font-weight: 400;
         margin: 16px 0 36px 0;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 800px) {
+        padding: 64px 0;
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
     }
 }
 
@@ -104,6 +116,16 @@ main {
             background-color: var(--color-black-transparent);
         }
     }
+
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 24px;
+
+        .item {
+            padding: 28px 16px 16px 16px;
+            font-size: 20px;
+        }
+    }
 }
 
 .text {
@@ -114,65 +136,27 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 48px;
-}
 
-.item.green {
-    background-color: var(--color-green);
-}
-
-.item.yellow {
-    background-color: var(--color-yellow);
-}
-
-.item.purple {
-    background-color: var(--color-purple);
-    color: var(--color-white);
-    span {
-        background-color: var(--color-white-transparent);
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-row-gap: 24px;
     }
 }
 
-.item.pink {
-    background-color: var(--color-pink);
-    color: var(--color-white);
-    span {
-        background-color: var(--color-white-transparent);
+@each $color in 'white' 'teal' 'blue' 'orange' 'yellow' 'green' {
+    .item.#{$color} {
+        background-color: var(--color-#{$color});
     }
 }
 
-.item.black {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    span {
-        background-color: var(--color-white-transparent);
-    }
-}
-
-.item.white {
-    background-color: var(--color-white);
-}
-
-.item.teal {
-    background-color: var(--color-teal);
-}
-
-.item.blue {
-    background-color: var(--color-blue);
-}
-
-.item.white {
-    background-color: var(--color-white);
-}
-
-.item.orange {
-    background-color: var(--color-orange);
-}
-
-.item.slate {
-    background-color: var(--color-slate);
-    color: var(--color-white);
-    span {
-        background-color: var(--color-white-transparent);
+@each $color in 'slate' 'black' 'pink' 'purple' {
+    .item.#{$color} {
+        background-color: var(--color-#{$color});
+        color: var(--color-white);
+        span {
+            background-color: var(--color-white-transparent);
+        }
     }
 }
 
@@ -203,6 +187,15 @@ main {
             color: var(--color-white);
         }
     }
+
+    @media (max-width: 800px) {
+        width: 100%;
+
+        .tab {
+            flex: 1 0;
+            text-align: center;
+        }
+    }
 }
 
 footer {
@@ -212,4 +205,12 @@ footer {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        
+        .logo {
+            margin-bottom: 24px;
+        }
+    }
 }
