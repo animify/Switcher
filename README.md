@@ -6,7 +6,8 @@
 
 ---
 
-### Getting Started
+# Development
+## Getting Started
 
 1. Clone the repository
 2. Go to the project directory - `cd ./Switcher`
